@@ -1,0 +1,103 @@
+{
+  "identity": {
+    "name": "E1",
+    "mission": "Redefine Miro as a Creative Powerhouse for the next generation.",
+    "principles": [
+      "Fusion over Imitation: Mix Cyberpunk aesthetics with Swiss Grid precision.",
+      "Emotion First: The site must feel like a 'flow state'—intense focus, then release.",
+      "Content is King: Every interaction tells the story of 'Chaos to Clarity'.",
+      "Negative Space: Use deep black voids to make the neon content pop."
+    ]
+  },
+  "theme": {
+    "mode": "dark",
+    "base_class": "dark"
+  },
+  "typography": {
+    "font_family_headings": "Syne, sans-serif",
+    "font_family_body": "Outfit, sans-serif",
+    "cdn_imports": [
+      "@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Outfit:wght@300;400;500;700&display=swap');"
+    ],
+    "heading_styles": "font-['Syne'] font-extrabold tracking-tight",
+    "body_styles": "font-['Outfit'] tracking-wide leading-relaxed"
+  },
+  "colors": {
+    "palette": {
+      "background": "#050505",
+      "surface": "#121212",
+      "surface_highlight": "#1E1E1E",
+      "primary": "#7C3AED",
+      "secondary": "#10B981",
+      "legacy_yellow": "#FFD02F",
+      "text_primary": "#FFFFFF",
+      "text_secondary": "#A1A1AA",
+      "border": "#27272A"
+    },
+    "gradients": {
+      "hero_glow": "radial-gradient(circle at 50% 50%, rgba(124, 58, 237, 0.15), rgba(5, 5, 5, 0))",
+      "clarity_beam": "linear-gradient(180deg, rgba(16, 185, 129, 0) 0%, rgba(16, 185, 129, 0.1) 50%, rgba(16, 185, 129, 0) 100%)"
+    },
+    "utility_classes": {
+      "bg_main": "bg-[#050505]",
+      "text_glow_violet": "drop-shadow-[0_0_15px_rgba(124,58,237,0.5)]",
+      "text_glow_mint": "drop-shadow-[0_0_15px_rgba(16,185,129,0.5)]"
+    }
+  },
+  "layout_strategies": {
+    "spacing_scale": "generous",
+    "container_padding": "px-6 md:px-12 lg:px-24",
+    "section_spacing": "py-24 md:py-32",
+    "grid_system": "Use 'Bento Grid' (Mode A) for features. Asymmetry is mandatory."
+  },
+  "components": {
+    "Hero": {
+      "concept": "The Big Bang of Organization.",
+      "interaction": "Scroll-triggered animation. Initial state: 'Chaos' elements (papers, messy notes) scattered randomly. Scroll progress 0-30%: Elements fly into a neat grid, changing color from gray/yellow to Mint/Violet.",
+      "visuals": "Split screen effect not by line, but by state. Use a 'slider' handle that the user can drag to reveal clarity."
+    },
+    "ZenModeToggle": {
+      "path": "/components/ui/zen-toggle.jsx",
+      "description": "A pill-shaped floating toggle. When 'On', the entire page background dims, sidebars fade out, and only the active content remains bright.",
+      "animation": "Animate presence and opacity. Use Framer Motion layoutId for smooth transitions."
+    },
+    "VisualMagnet": {
+      "concept": "Magnetic Snapping.",
+      "interaction": "A scattered pile of 'cards'. As the user scrolls or hovers, they physically snap to a grid with a magnetic spring physics effect.",
+      "library": "framer-motion (useSpring)"
+    },
+    "AISight": {
+      "concept": "X-Ray Vision for Ideas.",
+      "interaction": "A search bar. When typed in, it doesn't just list results; it 'illuminates' related nodes in a graph visualization background.",
+      "mock_data": ["Anatomy of the Heart", "Tort Law Precedents", "Cubism Influences"]
+    }
+  },
+  "visual_assets": {
+    "hero_chaos": "https://images.unsplash.com/photo-1765758014805-a7a6cc272982?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzN8MHwxfHNlYXJjaHwxfHxtZXNzeSUyMGNyZWF0aXZlJTIwZGVzayUyMGNsdXR0ZXJlZCUyMHdvcmtzcGFjZXxlbnwwfHx8fDE3NzA5ODk2MTh8MA&ixlib=rb-4.1.0&q=85",
+    "hero_clarity": "https://images.unsplash.com/photo-1760278041881-e64e501d009c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHwzfHxtaW5pbWFsaXN0JTIwZGFyayUyMG9yZ2FuaXplZCUyMHdvcmtzcGFjZSUyMHNldHVwJTIwYWVzdGhldGljfGVufDB8fHx8MTc3MDk4OTYxOHww&ixlib=rb-4.1.0&q=85",
+    "personas": {
+      "medical": "https://images.unsplash.com/photo-1680449786212-de3b835dc467?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwyfHxtZWRpY2FsJTIwc3R1ZGVudCUyMHN0dWR5aW5nJTIwbGlicmFyeSUyMGRhcmslMjBsaWdodGluZ3xlbnwwfHx8fDE3NzA5ODk2MTl8MA&ixlib=rb-4.1.0&q=85",
+      "law": "https://images.unsplash.com/photo-1669348849154-25e23e2ccf05?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NjZ8MHwxfHNlYXJjaHwxfHxsYXclMjBzdHVkZW50JTIwbGlicmFyeXxlbnwwfHx8fDE3NzA5ODk2Mjl8MA&ixlib=rb-4.1.0&q=85",
+      "art": "https://images.unsplash.com/photo-1725288342265-1b83d958e584?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNDR8MHwxfHNlYXJjaHwzfHxhcnQlMjBzdHVkZW50JTIwc2tldGNoaW5nJTIwY3JlYXRpdmUlMjBzdHVkaW8lMjBjb2xvcmZ1bCUyMGxpZ2h0aW5nfGVufDB8fHx8MTc3MDk4OTYyMHww&ixlib=rb-4.1.0&q=85",
+      "hustler": "https://images.unsplash.com/photo-1683796491683-9e7aad6a0a5e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzZ8MHwxfHNlYXJjaHwyfHxjb29sJTIwY3JlYXRpdmUlMjBtYW4lMjBwb3J0cmFpdCUyMGdsYXNzZXMlMjBkYXJrJTIwYmFja2dyb3VuZHxlbnwwfHx8fDE3NzA5ODk2MzB8MA&ixlib=rb-4.1.0&q=85",
+      "visual_learner": "https://images.unsplash.com/photo-1638452033979-14fba9e17fbb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzV8MHwxfHNlYXJjaHwxfHx5b3VuZyUyMGRlc2lnbmVyJTIwd29ya2luZyUyMG9uJTIwdGFibGV0JTIwZm9jdXNlZCUyMGNyZWF0aXZlfGVufDB8fHx8MTc3MDk4OTYyMnww&ixlib=rb-4.1.0&q=85"
+    }
+  },
+  "instructions_to_main_agent": [
+    "INSTALL: yarn add framer-motion lucide-react clsx tailwind-merge sonner",
+    "SETUP: Add the font imports to index.css immediately.",
+    "ACTION: Create a 'components/landing' directory for all landing page specific sections.",
+    "CRITICAL: Do not use the default 'slate' colors from Shadcn. Override them in tailwind.config.js with the palette provided.",
+    "VISUALS: Use 'backdrop-blur-xl' heavily. The interface should feel like it's floating on glass.",
+    "ANIMATION: Use 'AnimatePresence' for the Zen Mode toggle. It's not just a CSS class change; elements must physically exit the DOM.",
+    "ACCESSIBILITY: Ensure the Violet (#7C3AED) has sufficient contrast on Black. If not, lighten it to #8B5CF6 for text.",
+    "TESTING: Add data-testid to the Zen Toggle ('zen-mode-trigger'), Search Bar ('ai-sight-input'), and Magnet Cards ('magnet-card')."
+  ],
+  "universal_guidelines": [
+    "Avoid 'AI Slop' aesthetics: No generic gradients, no centered text blocks without purpose.",
+    "Dark Mode Only: This is a dark-themed brand. Do not implement a light mode toggle.",
+    "Motion is Meaning: Animations must explain the feature (e.g., Chaos -> Clarity), not just look cool.",
+    "Use 'sonner' for all notifications.",
+    "Never use 'transparent' backgrounds for dropdowns/modals; use semi-transparent black with blur."
+  ]
+}
