@@ -1,34 +1,85 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* Project VISUALIZE - Global Styles */
+
+/* Hero chaos-to-clarity slider */
+.chaos-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #A1A1AA, #7C3AED);
+  outline: none;
+  border-radius: 2px;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+.chaos-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #7C3AED;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.6);
+  transition: box-shadow 0.3s ease;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+.chaos-slider::-webkit-slider-thumb:hover {
+  box-shadow: 0 0 30px rgba(124, 58, 237, 0.8);
 }
 
-.App-link {
-    color: #61dafb;
+/* Sticky note styles */
+.sticky-note {
+  padding: 12px 16px;
+  border-radius: 4px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  width: 140px;
+  min-height: 80px;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+/* Dim effect for AI Sight */
+.dimmed {
+  opacity: 0.12 !important;
+  filter: grayscale(1) blur(1px);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.illuminated {
+  opacity: 1 !important;
+  filter: none;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 30px rgba(124, 58, 237, 0.3);
+}
+
+/* Section divider glow */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(124, 58, 237, 0.3), transparent);
+}
+
+/* Card hover lift */
+.card-lift {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s ease;
+}
+
+.card-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Typing cursor animation */
+@keyframes blink-cursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.typing-cursor::after {
+  content: '|';
+  animation: blink-cursor 0.8s ease-in-out infinite;
+  color: #7C3AED;
+  margin-left: 2px;
 }
